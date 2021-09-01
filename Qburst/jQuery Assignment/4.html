@@ -1,0 +1,35 @@
+<!-- Find the first image in the table? -->
+
+<html>
+<head>
+    <title>The jQuery Example</title> 
+</head>
+<body>
+    <div class="parent">
+        <div class="child1"></div>
+        <img src="sample.jpg" alt="sample image">
+        <div class="child2">
+            <table class="child3">
+                <tr><td>James</td></tr>
+                <tr><td>Tane</td></tr>
+                <tr><td><img src="sample.jpg" alt="sample image"></td></tr>
+                <tr><td>David</td></tr>
+                <tr><td>Glen</td></tr>
+                <tr><td>Ben</td></tr>
+                <tr><td><img src="sample.jpg" alt="sample image"></td></tr>
+                <tr><td>Antony</td></tr>
+                <tr><td>Mike</td></tr>
+                <tr><td>Dan</td></tr>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+
+    <script type="text/javascript" language="javascript">
+       let image1 = $("img").first();
+       console.log(image1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Example</title>
+        <style>
+            form {
+                text-align: center;
+            }
+            
+            input {
+                font-size: 16px;
+                margin-top: 20px;
+            }
+           
+            p:first-child {
+                width: 400px;
+                text-align: center;
+                margin:auto;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+    <form>    
+        Enter a text: <input type="text">
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="text-output"></p>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        console.log("1");
+        $('form').submit(function(e){
+            e.preventDefault();
+            let txt=$('input').val();
+            console.log(txt);
+            $('#text-output').text(txt);
+        })
+    </script>
+    </body>
+</html>

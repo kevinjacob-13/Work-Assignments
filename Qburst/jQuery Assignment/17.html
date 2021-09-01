@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Finds all checkbox inputs.</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="Input Button">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="hidden">
+        <input type="button" value="Output Button">
+        <select>
+            <option>Option</option>
+        </select>
+    </form>
+    <p></p>
+    <script type="text/javascript" src="jquery.min.js">
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            let count = $('input:checkbox').length;
+            console.log(count);
+            $('p').text(count);
+            $('p').css("color","blue");
+            $('input:checkbox').wrap("<span></span>").parent().css({
+                        background: "black",
+                        border: "3px red solid"
+              });
+        });
+    </script>
+</body>
+</html>

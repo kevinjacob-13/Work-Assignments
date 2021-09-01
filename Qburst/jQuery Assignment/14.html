@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>14</title>
+</head>
+<body>
+	<button id="b1">Click 1</button>
+	<div id="div1"></div>
+
+	<script type="text/javascript" src="jquery.min.js">
+	</script>
+
+	<script type="text/javascript">
+		$("#b1").click(function(){
+		  $.ajax({url: "test.txt", success: function(result){
+		    $("#div1").html(result);
+		  }});
+		});
+		$("#b2").click(function(){
+		  $.post({url: "test2.txt", success: function(result){
+		    $("#div2").html(result);
+		  }});
+		});
+
+		var jqxhr = $.post( "test2.txt", function() {
+		  console.log( "post success" );
+		})
+		  .done(function() {
+		    console.log( "second success" );
+		  })
+		  .fail(function() {
+		    console.log( "error" );
+		  })
+		  .always(function() {
+		    console.log( "finished" );
+		  }); 
+
+	</script>
+</body>
+</html>
